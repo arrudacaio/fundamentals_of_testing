@@ -1,6 +1,4 @@
-const sum = (a, b) => a + b
-
-const subtract = (a, b) => a - b
+const { sum, subtract } = require('./math')
 
 let result = sum(7, 3)
 
