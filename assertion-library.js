@@ -1,10 +1,9 @@
 const { sum, subtract } = require('./math')
 
-let result, expected
 
 function sumTest() {
-  result = sum(7, 3)
-  expected = 9
+  const result = sum(7, 3)
+  const expected = 9
   expect(result).toBe(expected)
 
 }
@@ -13,8 +12,8 @@ test('Sum adds numbers', sumTest)
 
 
 function subtractTest() {
-  result = subtract(3, 7)
-  expected = -4
+  const result = subtract(3, 7)
+  const expected = -4
   expect(result).toBe(expected)
 }
 
