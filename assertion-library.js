@@ -1,23 +1,18 @@
 const { sum, subtract } = require('./math')
 
 
-function sumTest() {
+test('Sum adds numbers', () => {
   const result = sum(7, 3)
   const expected = 9
   expect(result).toBe(expected)
-
-}
-
-test('Sum adds numbers', sumTest)
+})
 
 
-function subtractTest() {
+test('Subtract subtracts numbers', () => {
   const result = subtract(3, 7)
   const expected = -4
   expect(result).toBe(expected)
-}
-
-test('Subtract subtracts numbers', subtractTest)
+})
 
 
 // Making more helpful error messages in by running all the tests
