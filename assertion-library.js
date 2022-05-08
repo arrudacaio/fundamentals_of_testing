@@ -28,5 +28,5 @@ test('subAsync subtracts numbers asynchronously', async () => {
 
 
 
-// Now we need to run use following command:
+// Now we need to run use following command or use `npx jest`:
 // node --require ./setup-global.js ./assertion-library.js
