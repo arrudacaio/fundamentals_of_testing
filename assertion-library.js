@@ -1,9 +1,9 @@
-const { sum, subtract } = require('./math')
+const { sum, sumAsync, subtract, subtractAsync } = require('./math')
 
 
 test('Sum adds numbers', () => {
   const result = sum(7, 3)
-  const expected = 9
+  const expected = 10
   expect(result).toBe(expected)
 })
 
@@ -14,12 +14,25 @@ test('Subtract subtracts numbers', () => {
   expect(result).toBe(expected)
 })
 
+test('sumAsync adds numbers asynchronously', async () => {
+  const result = await sumAsync(7, 3)
+  const expected = 10
+  expect(result).toBe(expected)
+})
+
+test('subAsync subtracts numbers asynchronously', async () => {
+  const result = await subtractAsync(7, 3)
+  const expected = 4
+  expect(result).toBe(expected)
+})
+
+
 
 // Making more helpful error messages in by running all the tests
-function test(title, callback) {
+async function test(title, callback) {
   // Como essa função pode lançar um erro, irei colocar dentro de um try
   try {
-    callback()
+    await callback() // Without async, this function returns a Promise
     console.log(`✔️  ${title}`)
   } catch (error) {
     console.error(`❌ ${title}`)

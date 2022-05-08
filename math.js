@@ -1,4 +1,4 @@
-const sum = (a, b) => a - b // We have intentionaly error
+const sum = (a, b) => a + b
 const subtract = (a, b) => a - b
 
 
